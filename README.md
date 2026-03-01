@@ -158,9 +158,9 @@ The main goal of this project is to create a reusable sidebar that supports:
 > Extra pages (Home, Basket, Favorite, Account) are included only to demonstrate and test the sidebar in a multi-page layout.
 
 ### 🛠 Tech Stack
-- HTML5
-- CSS3 (Flexbox/Grid + Media Queries)
-- Vanilla JavaScript
+- HTML
+- CSS (Flexbox/Grid + Media Queries)
+- JavaScript
 - Font Awesome (icons)
 - LocalStorage (used in demo pages like Basket/Account/Favorite)
 
