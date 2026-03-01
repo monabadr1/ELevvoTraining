@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorite</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="favorite.css" />
+</head>
+
+<body>
+  <button class="mobile-open" id="mobileOpen">
+    <i class="fa-solid fa-bars"></i> Menu
+  </button>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="content">
+    <header class="page-head">
+      <h1>Favorite</h1>
+      <p class="muted">Add favorite items to get soon</p>
+    </header>
+
+    <section class="favorite">
+      <div class="favorite-list" id="favoriteList"></div>
+    </section>
+  </main>
+
+  <script src="sidebar.js"></script>
+  <script src="favorite.js"></script>
+</body>
+</html>

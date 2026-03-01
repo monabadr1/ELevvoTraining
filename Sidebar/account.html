@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="account.css" />
+</head>
+
+<body>
+  <button class="mobile-open" id="mobileOpen">
+    <i class="fa-solid fa-bars"></i> Menu
+  </button>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="content">
+    <header class="page-head">
+      <h1>Account</h1>
+      <p class="muted">Your profile & orders</p>
+    </header>
+
+    <section class="account-grid">
+      <article class="card">
+        <div class="card-head">
+          <h3><i class="fa-solid fa-user"></i> Profile</h3>
+        </div>
+
+        <div class="profile">
+          <div class="avatar" id="avatar">W</div>
+
+          <div class="profile-info">
+            <div class="field">
+              <span class="label">Full Name</span>
+              <input id="fullName" type="text" placeholder="Your name" />
+            </div>
+
+            <div class="field">
+              <span class="label">Email</span>
+              <input id="email" type="email" placeholder="example@mail.com" />
+            </div>
+
+            <div class="field">
+              <span class="label">Phone</span>
+              <input id="phone" type="tel" placeholder="+20..." />
+            </div>
+
+            <div class="field">
+              <span class="label">Address</span>
+              <input id="address" type="text" placeholder="Your address" />
+            </div>
+
+            <button class="btn" id="saveProfileBtn">Save Profile</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Orders -->
+      <article class="card">
+        <div class="card-head">
+          <h3><i class="fa-solid fa-box"></i> Orders</h3>
+          <span class="pill" id="ordersCount">0</span>
+        </div>
+
+        <div class="orders" id="ordersList"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="account.js"></script>
+  <script src="sidebar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="form.css" />
+
+
+</head>
+
+<body>
+
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="content">
+        <section class="account-grid">
+            <article class="card">
+                <div class="card-head">
+                    <h3>Contact Us</h3>
+                </div>
+
+                <form>
+                    <div class="field">
+                        <span class="label">Full Name</span>
+                        <input id="fullName" type="text" placeholder="Your name" />
+                    </div>
+
+                    <div class="field">
+                        <span class="label">Email</span>
+                        <input id="email" type="email" placeholder="example@gmail.com" required />
+                    </div>
+
+                    <div class="field">
+                        <span class="label">Subject</span>
+                        <input id="subject" type="text" placeholder="subject" required />
+                    </div>
+
+                    <div class="field">
+                        <span class="label">Message</span>
+                        <input id="message" type="text" placeholder="message" />
+                    </div>
+
+                    <button class="btn" type="submit">Submit</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <script src="Form.js"></script>
+</body>
+
+</html>

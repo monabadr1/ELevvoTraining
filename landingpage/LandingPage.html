@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudySphere</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="LandingPage.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar__container">
+            <div class="brand">
+                <i class="fa-solid fa-circle-nodes"></i>
+                <span class="brand__name">StudySphere</span>
+                <span class="brand__tag">Study • Summarize • Quiz </span>
+            </div>
+
+            <button class="darkmode-btn" id="darkToggle">
+                <i class="fa-solid fa-moon"></i>
+                <span>Dark</span>
+            </button>
+        </div>
+    </header>
+    <main class="content">
+        <section class="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <a class="hero__badge" href="#demo">
+                        <i class="fa-solid fa-sparkles"></i>
+                        AI summariess + quizzes in seconds
+                        <span class="arrow">→</span>
+                    </a>
+
+                    <h1>Study smarter .Finish faster.
+                    </h1>
+
+                    <p> Upload notes or PDFs and get instant summaries, flashcards, quizzes, and a personalized study
+                        plan.
+                    </p>
+                    <div class="hero__buttons">
+                        <a class="hero__btn hero__btn--primary" href="#cta">
+                            Try Free <span class="arrow">→</span>
+                        </a>
+
+                        <a class="hero__btn hero__btn--ghost" href="#demo">
+                            watch Demo <span class="arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="hero__mini">
+                        <div class="mini__pill"><i class="fa-solid fa-file-pdf"></i> PDF</div>
+                        <div class="mini__pill"><i class="fa-solid fa-language"></i> Arabic & English</div>
+                        <div class="mini__pill"><i class="fa-solid fa-shield"></i> Private</div>
+                    </div>
+
+
+                </div>
+
+                <div class="hero__visual">
+                    <img class="hero__img" src="images/learn.jpg" alt="StudySphere AI Preview">
+                    <div class="hero__floating hero__floating--a">
+                        <div class="float__title"><i class="fa-solid fa-wand-magic-sparkles"></i> Summary</div>
+                        <div class="float__text">Key points generated</div>
+                    </div>
+                    <div class="hero__floating hero__floating--b">
+                        <div class="float__title"><i class="fa-solid fa-circle-question"></i> Quiz</div>
+                        <div class="float__text">10 questions ready</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="stats">
+            <div class="stats__container">
+                <div class="stat">
+                    <div class="stat__num" data-count="50000">0</div>
+                    <div class="stat__label">Learners</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__num" data-count="4.9">0</div>
+                    <div class="stat__label">Average rating</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__num" data-count="1200000">0</div>
+                    <div class="stat__label">Flashcards created</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards">
+            <h2 class="section__title">
+                <i class="fa-solid fa-bolt section__icon"></i>
+                Features
+            </h2>
+
+            <p class="section__subtitle">
+                Everything you need to study, revise, and ace exams—powered by AI.
+            </p>
+            <div class="card__grid">
+                <article class="Feature__card ">
+                    <div class="card__icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <h3 class="Feature__card__title">Smart Summaries</h3>
+                    <p class="Feature__card__desc">Turn long chapters into clear key points.</p>
+                </article>
+
+                <article class="Feature__card ">
+                    <div class="card__icon"><i class="fa-solid fa-circle-question"></i></div>
+                    <h3 class="Feature__card__title">Auto Quizzes</h3>
+                    <p class="Feature__card__desc">Generate MCQ and True/False from your notes.</p>
+                </article>
+
+                <article class="Feature__card ">
+                    <div class="card__icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3 class="Feature__card__title">Flashcards</h3>
+                    <p class="Feature__card__desc">Instant revision cards for fast memorization.</p>
+                </article>
+
+                <article class="Feature__card ">
+                    <div class="card__icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3 class="Feature__card__title">Study Plan</h3>
+                    <p class="Feature__card__desc">A schedule based on your deadline and free time.</p>
+                </article>
+
+                <article class="Feature__card ">
+                    <div class="card__icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="Feature__card__title">Progress Tracking</h3>
+                    <p class="Feature__card__desc">Track consistency, weak topics, and improvements.</p>
+                </article>
+
+                <article class="Feature__card ">
+                    <div class="card__icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3 class="Feature__card__title">Explain Like I’m 5</h3>
+                    <p class="Feature__card__desc">Get simplified explanations for hard concepts.</p>
+                </article>
+            </div>
+        </section>
+        <section class="demo" id="demo">
+            <div class="demo__container reveal">
+                <h2 class="section__title"><i class="fa-solid fa-flask section__icon"></i> Mini Demo</h2>
+                <p class="section__subtitle">Paste a paragraph and generate a “mock” summary + quiz (front-end only).
+                </p>
+
+                <div class="demo__grid">
+                    <div class="demo__panel">
+                        <label class="demo__label">Your text</label>
+                        <textarea id="demoText" class="demo__textarea"
+                            placeholder="Paste a short paragraph here..."></textarea>
+                        <button class="demo__btn" id="runDemo">
+                            Generate <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </button>
+                    </div>
+
+                    <div class="demo__panel">
+                        <label class="demo__label">Output</label>
+                        <div class="demo__output" id="demoOut">
+                            <div class="demo__empty">Output will appear here ✨</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pricing" id="pricing">
+            <h2 class="section__title"> <i class="fa-solid fa-tags section__icon"></i>
+                Plans</h2>
+            <p class="section__subtitle">Choose a plan that fits your study flow.</p>
+
+            <div class="pricing__grid">
+
+                <article class="pricing__card">
+                    <div class="pricing__icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3 class="pricing__name">Free </h3>
+                    <p class="pricing__price">$0 <span>/ month</span></p>
+
+                    <ul class="pricing__features">
+                        <li><i class="fa-solid fa-check"></i>5 summaries/week</li>
+                        <li><i class="fa-solid fa-check"></i> Basic quizzes</li>
+                        <li><i class="fa-solid fa-check"></i> Limited flashcards</li>
+
+                    </ul>
+
+                    <a href="#cta" class="pricing__btn pricing__btn--outline">Get Started</a>
+                </article>
+
+                <article class="pricing__card pricing__card--popular">
+                    <div class="pricing__badge">Most Popular</div>
+                    <div class="pricing__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="pricing__name"> Pro</h3>
+                    <p class="pricing__price">$5 <span>/ month</span></p>
+
+                    <ul class="pricing__features">
+                        <li><i class="fa-solid fa-check"></i> Unlimited Courses</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced quiz types</li>
+                        <li><i class="fa-solid fa-check"></i> Study plan + tracking</li>
+                    </ul>
+
+                    <a href="#cta" class="pricing__btn pricing__btn--outline ">Choose Pro</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="testimonials_container">
+                <div class="testimonial__head">
+                    <div class="testimonial__icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="testimonial__meta">
+                        <h4>Mariam A.</h4>
+                        <span>Engineering Student</span>
+                    </div>
+
+                    <div class="testimonial__stars" aria-label="5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="testimonial__quote">
+                        “The summaries saved me hours and the quizzes helped me revise fast.”
+                    </p>
+                </div>
+                <div class="testimonial__head">
+                    <div class="testimonial__icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="testimonial__meta">
+                        <h4>Salma K.</h4>
+                        <span>Business Student</span>
+                    </div>
+
+                    <div class="testimonial__stars" aria-label="5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="testimonial__quote">
+                        “Explaining concepts simply is my favorite feature.”</p>
+                </div>
+                <div class="testimonial__head">
+                    <div class="testimonial__icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="testimonial__meta">
+                        <h4>Omar S.</h4>
+                        <span>Medical Student</span>
+                    </div>
+
+                    <div class="testimonial__stars" aria-label="5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <p class="testimonial__quote">
+                        “Flashcards + study plan = I stopped cramming last minute.” </p>
+                </div>
+            </div>
+
+        </section>
+        <section class="final-cta" id="cta">
+            <div class="cta__container">
+                <h2 class="cta__title">
+                    Stop cramming. Start studying smarter. </h2>
+
+                <p class="cta__subtitle">
+                    Try StudySphere AI free and feel the difference this week. </p>
+
+                <a href="#" class="cta__btn">
+                    Get Started — It’s Free
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <script src="landingpage.js"></script>
+
+</body>
+
+</html>

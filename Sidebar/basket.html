@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basket</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="basket.css" />
+</head>
+
+<body>
+  <button class="mobile-open" id="mobileOpen">
+    <i class="fa-solid fa-bars"></i> Menu
+  </button>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="content">
+    <header class="page-head">
+      <h1>Basket</h1>
+      <p class="muted">Review your items and checkout</p>
+    </header>
+
+    <section class="basket-layout">
+      <div class="basket-list" id="basketList"></div>
+
+      <aside class="basket-summary">
+        <h3>Summary</h3>
+
+        <div class="row">
+          <span>Items</span>
+          <span id="itemsCount">0</span>
+        </div>
+
+        <div class="row">
+          <span>Total</span>
+          <span id="totalPrice">0 EG</span>
+        </div>
+
+        <button class="checkout-btn" id="checkoutBtn">
+          Checkout
+        </button>
+
+        <button class="clear-btn" id="clearBtn">
+          Clear Basket
+        </button>
+      </aside>
+    </section>
+  </main>
+
+  <script src="basket.js"></script>
+  <script src="sidebar.js"></script>
+
+</body>
+</html>
