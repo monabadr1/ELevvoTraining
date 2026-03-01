@@ -230,8 +230,8 @@ A modern responsive landing page for **StudySphere**, a study assistant concept 
 The project is **front-end only** and includes interactive UI features such as **dark/light mode**, **smooth scrolling**, **stats counter animation**, and a **mini demo** that generates a mock summary + quiz from user text.
 
 ### 🛠 Tech Stack
-- HTML5
-- CSS3 (Responsive Layout + Media Queries)
+- HTML
+- CSS (Responsive Layout + Media Queries)
 - Vanilla JavaScript
 - Font Awesome (icons)
 
@@ -262,7 +262,7 @@ studysphere-landing/
 
 ### 🚀 How to Run
 1. Clone the repository
-2. Open `index.html` in your browser  
+2. Open `landingpage.html` in your browser  
 (No dependencies or build steps required)
 
 ### ⚙️ Key Functionality
@@ -286,9 +286,9 @@ A minimal **multi-city weather dashboard** that fetches real-time weather data a
 Users can search and add new cities, remove cities, refresh data, and the app remembers saved cities using `localStorage`.
 
 ### 🛠 Tech Stack
-- HTML5
-- CSS3 (Responsive Grid Layout)
-- Vanilla JavaScript
+- HTML
+- CSS (Responsive Grid Layout)
+-  JavaScript
 - OpenWeatherMap API
 
 ### ✨ Features
@@ -305,7 +305,7 @@ Users can search and add new cities, remove cities, refresh data, and the app re
 ### 📂 Project Structure (example)
 ```text
 weather-dashboard/
-│── index.html
+│── weatherdashboard.html
 │── weatherdashboard.css
 │── weatherdashboard.js
 ```
@@ -337,10 +337,5 @@ window.OWM_API_KEY = "YOUR_API_KEY_HERE";
 - Uses `Promise.allSettled()` to load multiple cities safely.
 - Uses `AbortController` to cancel previous requests when refreshing/searching quickly.
 
-### 📌 Future Improvements (Optional)
-- Add unit toggle (°C / °F)
-- Add geolocation “Use my location”
-- Better error UI per city card
-- Add more forecast days (5–7 days)
-- Hide API key using environment variables / backend proxy
+
 
