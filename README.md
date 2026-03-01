@@ -82,4 +82,71 @@ A responsive **Contact Us form** built using HTML and CSS with basic client-side
 (No additional dependencies required)
 
 ---
+## 📰 Project 2 – Personal Blog Homepage (Cards + Filter + Pagination)
+
+### 📌 Overview
+A simple homepage for a personal blog that displays posts in a **card layout**.  
+Users can filter posts by category (Food / Tech / Travel) and navigate posts using **pagination** (limited number of posts per page).
+
+### 🛠 Tech Stack
+- React (Functional Components)
+- JavaScript (ES6)
+- CSS3 (Responsive Grid Layout)
+
+### ✨ Features
+- Blog header with title: **The Daily Spark**
+- Blog post cards showing:
+  - Image
+  - Title
+  - Short description
+  - Date
+  - Category badge
+- Category filter buttons:
+  - All / Food / Tech / Travel
+- Pagination:
+  - Limits visible posts to **3 posts per page**
+  - Prev / Next buttons
+  - Page number buttons
+- Responsive layout:
+  - 3 columns on desktop
+  - 2 columns on tablet
+  - 1 column on mobile
+
+### 📂 Project Structure (example)
+```text
+blog-homepage/
+│── Home.jsx
+│── Home.css
+│── data/
+│   └── posts.js
+│── images/
+    ├── food/
+    ├── Tech/
+    └── Travel/
+```
+
+### 🚀 How to Run
+1. Install dependencies
+```bash
+npm install
+```
+
+2. Start the project
+```bash
+npm run dev
+```
+> (Or `npm start` depending on your React setup)
+
+### ⚙️ Key Logic
+- Filtering posts by category using `useMemo`
+- Pagination logic:
+  - `POSTS_PER_PAGE = 3`
+  - `totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE)`
+  - Slice posts based on current page
+
+### 📌 Future Improvements (Optional)
+- Add “Read More” page (post details page)
+- Search bar for posts
+- Improve description trimming (line clamp)
+- Store posts in JSON or fetch from API
  
