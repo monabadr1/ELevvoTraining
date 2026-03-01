@@ -279,5 +279,68 @@ studysphere-landing/
   - Generates keywords and a simple quiz template
 
 ---
+## ☁️ Project 5 – Weather Dashboard (Multi-City + Search + 3-Day Forecast)
 
+### 📌 Overview
+A minimal **multi-city weather dashboard** that fetches real-time weather data and a **3-day forecast** using the **OpenWeatherMap API**.  
+Users can search and add new cities, remove cities, refresh data, and the app remembers saved cities using `localStorage`.
+
+### 🛠 Tech Stack
+- HTML5
+- CSS3 (Responsive Grid Layout)
+- Vanilla JavaScript
+- OpenWeatherMap API
+
+### ✨ Features
+- Multi-city weather cards (default cities included)
+- Add city by search input
+- Remove city from dashboard
+- “Refresh” button to reload all cities
+- Auto refresh every **10 minutes**
+- 3-day forecast preview on each card
+- Skeleton loading UI while fetching data
+- Toast notifications (success / error)
+- Saves selected cities in **localStorage** (persists after reload)
+
+### 📂 Project Structure (example)
+```text
+weather-dashboard/
+│── index.html
+│── weatherdashboard.css
+│── weatherdashboard.js
+```
+
+### 🔑 Setup (API Key)
+This project uses OpenWeatherMap API.
+
+1) Create an API key from OpenWeatherMap  
+2) Add your key in the JS file:
+```js
+window.OWM_API_KEY = "YOUR_API_KEY_HERE";
+```
+
+> ⚠️ Important: Don’t publish your real API key in a public repository.
+
+### 🚀 How to Run
+1. Open `index.html` in your browser.
+
+✅ Recommended: run with a local server for best results:
+- VS Code → Live Server
+
+### ⚙️ How It Works (Key Logic)
+- **Current weather** endpoint:
+  - `/data/2.5/weather?q={city}&appid={key}&units=metric`
+- **Forecast** endpoint:
+  - `/data/2.5/forecast?q={city}&appid={key}&units=metric`
+- Forecast is grouped by day and selects values closest to **12:00 PM** for a clean daily preview.
+- Prevents duplicate cities (case-insensitive).
+- Uses `Promise.allSettled()` to load multiple cities safely.
+- Uses `AbortController` to cancel previous requests when refreshing/searching quickly.
+
+### 📌 Future Improvements (Optional)
+- Add unit toggle (°C / °F)
+- Add geolocation “Use my location”
+- Better error UI per city card
+- Add more forecast days (5–7 days)
+- Hide API key using environment variables / backend proxy
 
