@@ -63,9 +63,9 @@ The training focused on building a strong understanding of core web technologies
 A responsive **Contact Us form** built using HTML and CSS with basic client-side validation using JavaScript.
 
 ### 🛠 Tech Stack  
-- HTML5  
-- CSS3  
-- Vanilla JavaScript  
+- HTML
+- CSS  
+- JavaScript  
 
 ### ✨ Features  
 - Responsive card layout  
@@ -77,7 +77,7 @@ A responsive **Contact Us form** built using HTML and CSS with basic client-side
 
 ### 🚀 How to Run  
 1. Clone the repository  
-2. Open `index.html` in your browser  
+2. Open `Form.html` in your browser
 
 (No additional dependencies required)
 
