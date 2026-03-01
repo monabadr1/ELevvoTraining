@@ -143,10 +143,141 @@ npm run dev
   - `POSTS_PER_PAGE = 3`
   - `totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE)`
   - Slice posts based on current page
+---
+## 🧭 Project 3 – Responsive Sidebar Navigation (Expandable + Mobile + Submenu)
 
-### 📌 Future Improvements (Optional)
-- Add “Read More” page (post details page)
-- Search bar for posts
-- Improve description trimming (line clamp)
-- Store posts in JSON or fetch from API
- 
+### 📌 Overview
+A responsive sidebar navigation system built with **HTML, CSS, and JavaScript**.  
+The main goal of this project is to create a reusable sidebar that supports:
+- Expand / collapse (desktop)
+- Mobile open/close with overlay
+- Active link highlighting based on current page
+- Submenu toggle
+- Loading sidebar content from an external HTML file (`sidebar.html`) for reusability across pages
+
+> Extra pages (Home, Basket, Favorite, Account) are included only to demonstrate and test the sidebar in a multi-page layout.
+
+### 🛠 Tech Stack
+- HTML5
+- CSS3 (Flexbox/Grid + Media Queries)
+- Vanilla JavaScript
+- Font Awesome (icons)
+- LocalStorage (used in demo pages like Basket/Account/Favorite)
+
+### ✨ Core Features (Main Requirements)
+- **Collapsible sidebar**
+  - Default collapsed width
+  - Expanded width on toggle button
+- **Mobile sidebar**
+  - Opens with a menu button
+  - Closes with overlay click or `Esc`
+- **Active Link Highlight**
+  - Automatically detects current page using `location.pathname`
+- **Submenu**
+  - Expand/collapse submenu items
+  - Updates `aria-expanded` for accessibility
+- **Reusable Sidebar**
+  - Sidebar is stored in `sidebar.html`
+  - Loaded dynamically using `fetch()` into each page
+
+### 📂 Project Structure (example)
+```text
+shopping-sidebar/
+│── index.html               # redirect to home.html
+│── home.html
+│── basket.html
+│── favorite.html
+│── account.html
+│── sidebar.html             # sidebar markup (reusable)
+│── home.css                 # shared styles (sidebar + layout + home UI)
+│── basket.css
+│── favorite.css
+│── account.css
+│── sidebar.js               # load + sidebar interactions
+│── basket.js                # demo functionality (localStorage)
+│── favorite.js              # demo functionality (localStorage)
+│── account.js               # demo functionality (localStorage)
+│── images/
+```
+
+### 🚀 How to Run
+1. Open `index.html` or `home.html` in the browser.
+
+✅ Recommended: run with a local server (because `fetch("sidebar.html")` may not work in some browsers when opening files directly).
+Example:
+```bash
+# VS Code
+Live Server extension
+```
+
+### ⚙️ Key Logic
+- Load sidebar into pages:
+  - `fetch("sidebar.html")` → inject into `<aside id="sidebar">`
+- Toggle expand/collapse:
+  - Add/remove `.expanded`
+- Mobile sidebar:
+  - Add/remove `.active` + overlay
+- Submenu:
+  - Toggle `.open` class
+- Active link:
+  - Compare `href` with current file name
+---
+
+## 🎯 Project 4 – StudySphere Landing Page (Dark/Light Mode + Demo)
+
+### 📌 Overview
+A modern responsive landing page for **StudySphere**, a study assistant concept that offers AI summaries, quizzes, flashcards, and study plans.  
+The project is **front-end only** and includes interactive UI features such as **dark/light mode**, **smooth scrolling**, **stats counter animation**, and a **mini demo** that generates a mock summary + quiz from user text.
+
+### 🛠 Tech Stack
+- HTML5
+- CSS3 (Responsive Layout + Media Queries)
+- Vanilla JavaScript
+- Font Awesome (icons)
+
+### ✨ Features
+- Sticky top navigation bar
+- Dark / Light mode toggle (saved in `localStorage`)
+- Smooth scrolling for internal links
+- Hero section with CTA buttons and feature pills
+- Stats section with animated counters (IntersectionObserver + requestAnimationFrame)
+- Features grid (cards layout)
+- Mini Demo section:
+  - User pastes text
+  - Generates mock summary + quick quiz + keywords (front-end simulation)
+- Pricing section (Free / Pro)
+- Testimonials section
+- Final call-to-action section
+- Fully responsive design (desktop / tablet / mobile)
+
+### 📂 Project Structure (example)
+```text
+studysphere-landing/
+│── index.html
+│── LandingPage.css
+│── landingpage.js
+│── images/
+│   └── learn.jpg
+```
+
+### 🚀 How to Run
+1. Clone the repository
+2. Open `index.html` in your browser  
+(No dependencies or build steps required)
+
+### ⚙️ Key Functionality
+- **Theme Toggle**
+  - Adds/removes `light-mode` class on `<body>`
+  - Saves preference in `localStorage`
+
+- **Stats Counter Animation**
+  - Runs when the stats section becomes visible using `IntersectionObserver`
+
+- **Mini Demo Generator**
+  - Cleans text input
+  - Extracts first 1–2 sentences as a mock summary
+  - Generates keywords and a simple quiz template
+
+---
+
+
