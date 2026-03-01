@@ -1,4 +1,3 @@
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener("click", (e) => {
     const target = document.querySelector(a.getAttribute("href"));
@@ -8,7 +7,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Light mode toggle
 const toggleBtn = document.getElementById("darkToggle");
 
 function setLightMode(isLight) {
@@ -32,7 +30,6 @@ toggleBtn?.addEventListener("click", () => {
   setLightMode(!isLight);
 });
 
-// Counters
 function animateCount(el, to){
   const isFloat = String(to).includes(".");
   const duration = 900;
@@ -62,7 +59,6 @@ if (statsSection && statNums.length) {
   statsObs.observe(statsSection);
 }
 
-// Mini Demo (front-end mock)
 const demoText = document.getElementById("demoText");
 const demoOut = document.getElementById("demoOut");
 const runDemo = document.getElementById("runDemo");

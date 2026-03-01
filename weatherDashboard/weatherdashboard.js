@@ -1,4 +1,4 @@
-window.OWM_API_KEY = "2f2b400a9635e9307c0914e051809074";
+window.OWM_API_KEY = "";
 
 window.DEFAULT_CITIES = ["Cairo", "Alexandria", "Dubai", "London", "New York"];
 const API_KEY = window.OWM_API_KEY;

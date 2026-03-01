@@ -34,7 +34,6 @@ export default function Home() {
     setCurrentPage((p) => Math.min(totalPages, p + 1));
   }
 
-  // لو الفلتر اتغير و عدد الصفحات قل، اتأكد ان الصفحة الحالية ما تعديش
   if (currentPage > totalPages) {
     setCurrentPage(totalPages);
   }
