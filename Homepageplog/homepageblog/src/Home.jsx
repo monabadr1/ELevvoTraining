@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <>
       <header className="header">
-        <h1>The Daily Spark</h1>
+        <h1>CardBlog</h1>
 
         <div className="filter">
           {FILTERS.map((f) => (
